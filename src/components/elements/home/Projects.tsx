@@ -82,9 +82,11 @@ export default function Projects() {
         </div>
         <div className="mx-auto mt-10 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
           {projects.map((project) => (
-            <div
+            <a
               key={project.attributes.Title}
               className="flex flex-col overflow-hidden rounded-lg shadow-lg"
+              href={project.attributes.github}
+              target="_blank"
             >
               <div className="flex flex-1 flex-col justify-between bg-white p-6">
                 <div className="flex-1">
@@ -107,7 +109,7 @@ export default function Projects() {
                     projectTags(project.attributes.project_tags.data)}
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
