@@ -6,7 +6,7 @@ const positions = [
     title: "Full-Stack Software Engineer",
     type: "Full-time",
     location: "Remote",
-    department: "WaveRight Info Tech",
+    department: "WaveRight InfoTech",
     closeDate: "2020-01-07",
     closeDateFull: "Feb 7, 2021 - Current",
     description:
@@ -42,7 +42,7 @@ export default function Experience() {
           {positions.map((position) => (
             <li key={position.id}>
               <span className="block hover:bg-gray-50">
-                <div className="px-4 py-4 sm:px-6">
+                <div className="py-4 ">
                   <div className="flex items-center justify-between">
                     <p className="truncate text-md font-medium text-indigo-600">
                       {position.title}
