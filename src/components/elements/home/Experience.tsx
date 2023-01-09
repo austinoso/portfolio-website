@@ -44,7 +44,7 @@ export default function Experience() {
               <span className="block hover:bg-gray-50">
                 <div className="py-4 ">
                   <div className="flex items-center justify-between">
-                    <p className="truncate text-md font-medium text-indigo-600">
+                    <p className="truncate text-md font-medium text-blue-600">
                       {position.title}
                     </p>
                     <div className="ml-2 flex flex-shrink-0">
