@@ -2,7 +2,7 @@ import { CheckIcon } from "@heroicons/react/24/outline";
 
 const skills = [
   {
-    name: "JavaScript",
+    name: "TypeScript",
   },
   {
     name: "PHP",
@@ -30,10 +30,13 @@ export default function About() {
             My Background
           </p>
           <p className="mt-4 text-lg text-gray-500">
-            Starting out as a bootcamp graduate 3 years ago and currently
-            working as a full-stack web developer. I've gained experience
-            working with a variety of technologies and frameworks. I'm always
-            looking to learn new things and improve my skills.
+            As a bootcamp graduate and current full-time software developer, I
+            have a passion for learning new skills and improving current ones.
+            Throughout my journey, I have had the opportunity to work with a
+            range of technologies and frameworks, using languages like Ruby,
+            Perl, and JavaScript. I am excited to continue growing and learning
+            as a developer, and to apply my skills to help clients and
+            organizations solve problems and achieve their goals.
           </p>
         </div>
         <div className="mt-12 lg:mt-0">
