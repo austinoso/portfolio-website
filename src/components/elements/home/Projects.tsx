@@ -1,38 +1,11 @@
-const posts = [
-  {
-    title: "My Portfolio",
-    href: "#",
-    category: { name: "Personal", href: "#" },
-    description:
-      "Built with Tailwind CSS and Next.js. My personal website and portfolio.",
-    datetime: "2020-03-16",
-    skills: ["React", "Next.js", "Tailwind CSS"],
-  },
-  {
-    title: "SAMHSA Restricted-use Data Analysis System Scraper",
-    href: "#",
-    category: { name: "Freelance", href: "#" },
-    description:
-      "Scraper built in NodeJS for SAMHSA's Restricted-use Data Analysis System. Created as an easier method of obtaining data opposed to running a crosstab.",
-    datetime: "2020-03-10",
-    skills: ["Node.js", "JavaScript"],
-  },
-  {
-    title: "Improve your customer experience",
-    href: "#",
-    category: { name: "Case Study", href: "#" },
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.",
-    skills: [],
-  },
-];
-
 interface Project {
   attributes: any;
   id: number;
 }
 
 import { useState, useEffect } from "react";
+import { ArrowRightIcon } from "@heroicons/react/20/solid";
+import Link from "next/link";
 
 export default function Projects() {
   const [projects, setProjects] = useState([] as Project[]);
@@ -66,11 +39,11 @@ export default function Projects() {
   };
 
   return (
-    <div className="relative bg-gray-50 px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-12 lg:pb-28">
+    <div className="relative bg-gray-50 px-4 sm:px-6 lg:px-8">
       <div className="absolute inset-0">
-        <div className="h-1/3 bg-white sm:h-2/3" />
+        <div className="h-1/3 bg-white sm:h-3/5" />
       </div>
-      <div className="relative mx-auto max-w-7xl">
+      <div className="relative mx-auto max-w-7xl py-8">
         <div>
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl">
             Recent Projects
@@ -111,6 +84,14 @@ export default function Projects() {
               </div>
             </a>
           ))}
+        </div>
+        <div className="py-8 text-center">
+          <a href="/projects" target="_blank">
+            <button className="inline-flex items-center px-3.5 py-2 border border-transparent leading-4 font-medium rounded-full shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+              View All
+              <ArrowRightIcon className="ml-2 -mr-0.5 h-4 w-4" />
+            </button>
+          </a>
         </div>
       </div>
     </div>

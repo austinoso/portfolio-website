@@ -23,7 +23,7 @@ const skills = [
 
 export default function About() {
   return (
-    <div className="bg-white px-4 sm:px-6 lg:px-8 ">
+    <div className="bg-white px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl py-16 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:py-24">
         <div className="lg:col-span-2">
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900">
