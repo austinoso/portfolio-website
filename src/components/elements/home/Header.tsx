@@ -23,7 +23,8 @@ function Header() {
           <div className="space-y-2">
             <h1 className="text-lg">
               <span className="inline-flex items-center rounded-full bg-gray-100 px-3 py-0.5 text-sm font-medium text-gray-800 gap-1">
-                Hi, I'm <span className="font-semibold">Austin Osorio</span>{" "}
+                Hi, I&apos;m{" "}
+                <span className="font-semibold">Austin Osorio</span>{" "}
                 <span>👋</span>
               </span>
             </h1>
