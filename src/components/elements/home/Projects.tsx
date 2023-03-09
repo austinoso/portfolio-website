@@ -3,31 +3,18 @@ interface Project {
   id: number;
 }
 
+interface ProjectsProps {
+  projects: Project[];
+}
+
 import { useState, useEffect } from "react";
 import { ArrowRightIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 
-export default function Projects() {
-  const [projects, setProjects] = useState([] as Project[]);
-
-  useEffect(() => {
-    getProjects();
-  }, []);
-
-  useEffect(() => {
-    console.log(projects);
-  }, [projects]);
-
-  const getProjects = async () => {
-    const projectRes = await fetch(
-      "http://localhost:1337/api/projects?populate=%2A&pagination[page]=1&pagination[pageSize]=3&sort=relevance%3Adesc"
-    );
-    const projectData = await projectRes.json();
-    setProjects(projectData.data);
-  };
+export default function Projects(props: ProjectsProps) {
+  const projects = props.projects;
 
   const projectTags = (tags: any[]) => {
-    console.log(tags);
     return tags.map((tag: any) => (
       <span
         key={tag.id}
