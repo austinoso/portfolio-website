@@ -86,12 +86,12 @@ export default function Projects() {
           ))}
         </div>
         <div className="py-8 text-center">
-          <a href="/projects" target="_blank">
+          {/* <a href="/projects" target="_blank">
             <button className="inline-flex items-center px-3.5 py-2 border border-transparent leading-4 font-medium rounded-full shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
               View All
               <ArrowRightIcon className="ml-2 -mr-0.5 h-4 w-4" />
             </button>
-          </a>
+          </a> */}
         </div>
       </div>
     </div>
