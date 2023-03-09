@@ -20,7 +20,7 @@ export default function Projects() {
 
   const getProjects = async () => {
     const projectRes = await fetch(
-      "http://localhost:1337/api/projects?populate=%2A"
+      "http://localhost:1337/api/projects?populate=%2A&pagination[page]=1&pagination[pageSize]=3&sort=relevance%3Adesc"
     );
     const projectData = await projectRes.json();
     setProjects(projectData.data);
