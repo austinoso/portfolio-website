@@ -15,3 +15,13 @@ export async function loadProjectsList() {
 
   return projects;
 }
+
+export async function getProject(params: any) {
+  const { id } = params.params;
+
+  const res = await fetch(`http://51.81.211.148:1337/api/projects/${id}`);
+
+  const project = await res.json();
+
+  return project;
+}
