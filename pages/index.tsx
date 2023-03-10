@@ -18,7 +18,6 @@ import { loadProjects } from "../lib/load-projects";
 
 export async function getStaticProps() {
   const projects = await loadProjects();
-  console.log(projects);
 
   return {
     props: {
