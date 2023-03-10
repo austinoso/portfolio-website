@@ -3,26 +3,12 @@ interface Project {
   id: number;
 }
 
-import { useState, useEffect } from "react";
+interface ProjectsProps {
+  projects: Project[];
+}
 
-export default function Projects() {
-  const [projects, setProjects] = useState([] as Project[]);
-
-  useEffect(() => {
-    getProjects();
-  }, []);
-
-  useEffect(() => {
-    console.log(projects);
-  }, [projects]);
-
-  const getProjects = async () => {
-    const projectRes = await fetch(
-      "http://localhost:1337/api/projects?populate=%2A"
-    );
-    const projectData = await projectRes.json();
-    setProjects(projectData.data);
-  };
+export default function Projects(props: ProjectsProps) {
+  const projects = props.projects;
 
   const projectTags = (tags: any[]) => {
     console.log(tags);
