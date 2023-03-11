@@ -39,8 +39,8 @@ export default function About() {
             organizations solve problems and achieve their goals.
           </p>
         </div>
-        <div className="mt-12 lg:mt-0">
-          <dl className="space-y-6 sm:grid sm:grid-flow-col sm:grid-cols-2 sm:grid-rows-3 sm:gap-x-6 sm:gap-y-6 sm:space-y-0 lg:gap-x-8 my-12">
+        <div className="mt-auto flex justify-center lg:justify-end">
+          <dl className="grid grid-flow-col grid-cols-2 grid-rows-3 gap-x-6 gap-y-6 sm:space-y-0 lg:gap-x-8 my-12">
             {skills.map((feature) => (
               <div key={feature.name} className="relative">
                 <dt>
