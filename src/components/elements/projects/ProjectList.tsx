@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface Project {
   attributes: any;
   id: number;
@@ -11,7 +13,6 @@ export default function Projects(props: ProjectsProps) {
   const projects = props.projects;
 
   const projectTags = (tags: any[]) => {
-    console.log(tags);
     return tags.map((tag: any) => (
       <span
         key={tag.id}
@@ -27,12 +28,10 @@ export default function Projects(props: ProjectsProps) {
       <div className="relative mx-auto max-w-7xl">
         <div className="mx-auto mt-10 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
           {projects.map((project) => (
-            <a
-              key={project.attributes.Title}
+            <Link
+              href={`/projects/${project.id}`}
+              key={project.id}
               className="flex flex-col overflow-hidden rounded-lg shadow-lg"
-              href={project.attributes.github}
-              target="_blank"
-              rel="noreferrer"
             >
               <div className="flex flex-1 flex-col justify-between bg-white p-6">
                 <div className="flex-1">
@@ -46,7 +45,7 @@ export default function Projects(props: ProjectsProps) {
                       {project.attributes.Title}
                     </p>
                     <p className="mt-3 text-base text-gray-500">
-                      {project.attributes.Description}
+                      {project.attributes.summary}
                     </p>
                   </span>
                 </div>
@@ -55,7 +54,7 @@ export default function Projects(props: ProjectsProps) {
                     projectTags(project.attributes.project_tags.data)}
                 </div>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
