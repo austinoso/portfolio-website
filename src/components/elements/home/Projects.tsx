@@ -61,7 +61,7 @@ export default function Projects(props: ProjectsProps) {
                       {project.attributes.Title}
                     </p>
                     <p className="mt-3 text-base text-gray-500">
-                      {project.attributes.Description}
+                      {project.attributes.summary}
                     </p>
                   </span>
                 </div>
