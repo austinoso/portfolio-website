@@ -6,7 +6,7 @@ function Header() {
     <div
       className="
         text-white
-        bg-[url(/images/hero.jpg)]
+        bg-[url(/images/hero.webp)]
         bg-cover
         bg-center
       "
@@ -14,12 +14,11 @@ function Header() {
       <div
         className="
         bg-blue-300
-        py-44
         bg-opacity-60
         backdrop-blur-sm
       "
       >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex py-44">
           <div className="space-y-2">
             <h1 className="text-lg">
               <span className="inline-flex items-center rounded-full bg-gray-100 px-3 py-0.5 text-sm font-medium text-gray-800 gap-1">
