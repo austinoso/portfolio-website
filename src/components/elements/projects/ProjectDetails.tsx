@@ -16,8 +16,17 @@ export default function ProjectDetails(props: ProjectDetailsProps) {
           <h3 className="text-blue-500 text-lg font-bold">Other Projects</h3>
           <ProjectNav relivantProjects={relivantProjects} project={project} />
         </div>
-        <div className="w-full sm:w-2/3 md:w-3/4 p-4">
-          {project.attributes.Description}
+        <div className="w-full sm:w-2/3 md:w-3/4 p-4 flex flex-col space-y-4">
+          <div>{project.attributes.Description}</div>
+          <div>
+            <a
+              className="text-blue-500"
+              target="_blank"
+              href={project.attributes.github}
+            >
+              View Code
+            </a>
+          </div>
         </div>
       </div>
     </div>
