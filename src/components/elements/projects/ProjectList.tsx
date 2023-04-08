@@ -26,6 +26,7 @@ export default function Projects(props: ProjectsProps) {
   return (
     <div className="relative px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-12 lg:pb-28">
       <div className="relative mx-auto max-w-7xl">
+        <h1 className="font-bold text-xl text-blue-600">Projects</h1>
         <div className="mx-auto mt-10 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
           {projects.map((project) => (
             <Link
