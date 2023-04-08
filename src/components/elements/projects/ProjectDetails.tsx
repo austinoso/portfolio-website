@@ -25,6 +25,7 @@ export default function ProjectDetails(props: ProjectDetailsProps) {
               className="text-blue-500"
               target="_blank"
               href={project.attributes.github}
+              rel="noreferrer"
             >
               View Code
             </a>
