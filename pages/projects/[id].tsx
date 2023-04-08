@@ -4,6 +4,7 @@ import ProjectDetails from "../../src/components/elements/projects/ProjectDetail
 
 function Project(projectData: any) {
   const project = projectData.project.data;
+  const relivantProjects = projectData.relivantProjects.data;
 
   return (
     <>
@@ -22,7 +23,10 @@ function Project(projectData: any) {
           </div>
         </div>
       </div>
-      <ProjectDetails project={projectData} />
+      <ProjectDetails
+        project={projectData}
+        relivantProjects={relivantProjects}
+      />
     </>
   );
 }
@@ -31,10 +35,12 @@ export default Project;
 
 export async function getStaticProps(id: string) {
   const project = await getProject(id);
+  const relivantProjects = await loadProjectsList();
 
   return {
     props: {
       project,
+      relivantProjects,
     },
   };
 }
