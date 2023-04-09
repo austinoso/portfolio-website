@@ -18,7 +18,13 @@ export default function Header() {
         <div className="flex items-center gap-x-12">
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Austin Osorio</span>
-            <Image className="h-7 w-auto" src="/images/logo.svg" alt="" />
+            <Image
+              className="h-7 w-auto"
+              src="/images/logo.svg"
+              alt=""
+              width={1}
+              height={1}
+            />
           </Link>
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (

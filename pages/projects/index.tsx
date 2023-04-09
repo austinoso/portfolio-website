@@ -1,15 +1,20 @@
-import Header from "../../src/components/elements/projects/Header";
+import ProjectLayout from "../../src/layouts/ProjectLayout";
+import type { ReactElement } from "react";
 import ProjectList from "../../src/components/elements/projects/ProjectList";
 import { loadProjectsList } from "../../lib/load-projects";
+import type { NextPageWithLayout } from "../../pages/_app";
 
-export default function Projects(props: any) {
+const Projects: NextPageWithLayout = (props: any) => {
   return (
     <div>
-      <Header />
       <ProjectList projects={props.projects} />
     </div>
   );
-}
+};
+
+Projects.getLayout = function getLayout(page: ReactElement) {
+  return <ProjectLayout>{page}</ProjectLayout>;
+};
 
 export async function getStaticProps() {
   const projects = await loadProjectsList();
@@ -20,3 +25,5 @@ export async function getStaticProps() {
     },
   };
 }
+
+export default Projects;
