@@ -1,24 +1,27 @@
 import React from "react";
 import { getProject, loadProjectsList } from "../../lib/load-projects";
 import ProjectDetails from "../../src/components/elements/projects/ProjectDetails";
-import Header from "../../src/components/elements/projects/Header";
+import type { NextPageWithLayout } from "../../pages/_app";
+import type { ReactElement } from "react";
+import ProjectLayout from "../../src/layouts/ProjectLayout";
 
-function Project(projectData: any) {
+const Project: NextPageWithLayout = (projectData: any) => {
   const project = projectData.project.data;
   const relivantProjects = projectData.relivantProjects.data;
 
   return (
     <>
-      <Header />
       <ProjectDetails
         project={projectData}
         relivantProjects={relivantProjects}
       />
     </>
   );
-}
+};
 
-export default Project;
+Project.getLayout = function getLayout(page: ReactElement) {
+  return <ProjectLayout>{page}</ProjectLayout>;
+};
 
 export async function getStaticProps(id: string) {
   const project = await getProject(id);
@@ -42,3 +45,5 @@ export async function getStaticPaths() {
     fallback: false, // can also be true or 'blocking'
   };
 }
+
+export default Project;
