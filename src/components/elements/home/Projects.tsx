@@ -7,7 +7,6 @@ interface ProjectsProps {
   projects: Project[];
 }
 
-import { useState, useEffect } from "react";
 import { ArrowRightIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 
@@ -42,12 +41,10 @@ export default function Projects(props: ProjectsProps) {
         </div>
         <div className="mx-auto mt-10 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
           {projects.map((project) => (
-            <a
+            <Link
               key={project.attributes.Title}
               className="flex flex-col overflow-hidden rounded-lg shadow-lg"
-              href={project.attributes.github}
-              target="_blank"
-              rel="noreferrer"
+              href={"/projects/" + project.id}
             >
               <div className="flex flex-1 flex-col justify-between bg-white p-6">
                 <div className="flex-1">
@@ -70,16 +67,16 @@ export default function Projects(props: ProjectsProps) {
                     projectTags(project.attributes.project_tags.data)}
                 </div>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
         <div className="py-8 text-center">
-          {/* <a href="/projects" target="_blank">
+          <Link href="/projects">
             <button className="inline-flex items-center px-3.5 py-2 border border-transparent leading-4 font-medium rounded-full shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-              View All
+              View More
               <ArrowRightIcon className="ml-2 -mr-0.5 h-4 w-4" />
             </button>
-          </a> */}
+          </Link>
         </div>
       </div>
     </div>
