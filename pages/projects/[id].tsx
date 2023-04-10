@@ -5,7 +5,7 @@ import type { NextPageWithLayout } from "../../pages/_app";
 import type { ReactElement } from "react";
 import ProjectLayout from "../../src/layouts/ProjectLayout";
 
-const Project: NextPageWithLayout = (projectData: any) => {
+const Project: NextPageWithLayout = () => {
   return (
     <>
       <ProjectDetails />
