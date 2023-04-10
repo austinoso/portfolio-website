@@ -6,21 +6,22 @@ import type { ReactElement } from "react";
 import ProjectLayout from "../../src/layouts/ProjectLayout";
 
 const Project: NextPageWithLayout = (projectData: any) => {
-  const project = projectData.project.data;
-  const relivantProjects = projectData.relivantProjects.data;
-
   return (
     <>
-      <ProjectDetails
-        project={projectData}
-        relivantProjects={relivantProjects}
-      />
+      <ProjectDetails />
     </>
   );
 };
 
 Project.getLayout = function getLayout(page: ReactElement) {
-  return <ProjectLayout>{page}</ProjectLayout>;
+  const project = page.props.project.data;
+  const relivantProjects = page.props.relivantProjects.data;
+
+  return (
+    <ProjectLayout project={project} projects={relivantProjects}>
+      {page}
+    </ProjectLayout>
+  );
 };
 
 export async function getStaticProps(id: string) {

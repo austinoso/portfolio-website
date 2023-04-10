@@ -1,14 +1,10 @@
 import ProjectNav from "./ProjectNav";
 import ReactMarkdown from "react-markdown";
+import { useProjectContext } from "../../../contexts/project.context";
 
-interface ProjectDetailsProps {
-  project: any;
-  relivantProjects: any;
-}
-
-export default function ProjectDetails(props: ProjectDetailsProps) {
-  const project = props.project.project.data;
-  const relivantProjects = props.relivantProjects;
+export default function ProjectDetails() {
+  const { currentProject: project, projects: relivantProjects } =
+    useProjectContext();
 
   return (
     <div className="relative px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-12 lg:pb-28">
