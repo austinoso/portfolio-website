@@ -22,7 +22,10 @@ export default function ProjectBreadCrumbs() {
   }
 
   return (
-    <nav className="flex" aria-label="Breadcrumb">
+    <nav
+      className="flex mx-auto max-w-7xl items-center justify-between px-6 lg:px-8 py-6 lg:py-8"
+      aria-label="Breadcrumb"
+    >
       <ol role="list" className="flex items-center space-x-4">
         <li>
           <div>
