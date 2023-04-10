@@ -1,16 +1,13 @@
 import Link from "next/link";
+import { useProjectContext } from "../../../contexts/project.context";
 
 interface Project {
   attributes: any;
   id: number;
 }
 
-interface ProjectsProps {
-  projects: Project[];
-}
-
-export default function Projects(props: ProjectsProps) {
-  const projects = props.projects;
+export default function Projects() {
+  const { projects } = useProjectContext();
 
   const projectTags = (tags: any[]) => {
     return tags.map((tag: any) => (

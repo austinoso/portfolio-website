@@ -3,11 +3,15 @@ import type { ReactElement } from "react";
 import ProjectList from "../../src/components/elements/projects/ProjectList";
 import { loadProjectsList } from "../../lib/load-projects";
 import type { NextPageWithLayout } from "../../pages/_app";
+import { useProjectContext } from "../../src/contexts/project.context";
 
 const Projects: NextPageWithLayout = (props: any) => {
+  const { setProjects } = useProjectContext();
+  setProjects(props.projects);
+
   return (
     <div>
-      <ProjectList projects={props.projects} />
+      <ProjectList />
     </div>
   );
 };
