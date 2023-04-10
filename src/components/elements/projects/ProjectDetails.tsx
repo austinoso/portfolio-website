@@ -7,7 +7,7 @@ export default function ProjectDetails() {
     useProjectContext();
 
   return (
-    <div className="relative px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-12 lg:pb-28">
+    <div className="mx-auto max-w-7xl relative px-4 pb-20 lg:pb-28">
       <div className="relative mx-auto max-w-7xl flex flex-row flex-wrap">
         <div className="w-full sm:w-1/3 md:w-1/4 p-4">
           <h3 className="text-blue-600 text-lg font-bold">Other Projects</h3>
