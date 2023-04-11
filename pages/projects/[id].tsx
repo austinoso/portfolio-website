@@ -4,10 +4,27 @@ import ProjectDetails from "../../src/components/elements/projects/ProjectDetail
 import type { NextPageWithLayout } from "../../pages/_app";
 import type { ReactElement } from "react";
 import ProjectLayout from "../../src/layouts/ProjectLayout";
+import Head from "next/head";
 
-const Project: NextPageWithLayout = () => {
+const Project: NextPageWithLayout = (props: any) => {
+  const project = props.project.data;
+
   return (
     <>
+      <Head>
+        <title>{project.attributes.Title}</title>
+        <meta name="title" content="Austin Osorio | Projects"></meta>
+        <meta
+          name="keywords"
+          content="software engineer, Austin Osorio, California"
+        ></meta>
+        <meta name="robots" content="noindex,nofollow"></meta>
+        <meta
+          httpEquiv="Content-Type"
+          content="text/html; charset=utf-8"
+        ></meta>
+        <meta name="language" content="English"></meta>
+      </Head>
       <ProjectDetails />
     </>
   );
