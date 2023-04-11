@@ -16,6 +16,8 @@ export default function ProjectNav(props: ProjectNavProps) {
   return (
     <nav className="space-y-1" aria-label="Sidebar">
       {relivantProjects.map((project: any) => {
+        if (project.id === currentProject.id) return null;
+
         return (
           <Link
             key={project.id}
