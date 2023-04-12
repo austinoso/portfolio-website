@@ -23,13 +23,13 @@ const skills = [
 
 export default function About() {
   return (
-    <div className="bg-white px-4 sm:px-6 lg:px-8">
+    <div className="bg-black px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl py-16 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:py-24">
         <div className="lg:col-span-2">
-          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900">
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white">
             My Background
           </p>
-          <p className="mt-4 text-lg text-gray-500">
+          <p className="mt-4 text-lg text-gray-300">
             As a bootcamp graduate and current full-time software developer, I
             have a passion for learning new skills and improving current ones.
             Throughout my journey, I have had the opportunity to work with a
@@ -48,7 +48,7 @@ export default function About() {
                     className="absolute h-6 w-6 text-green-500"
                     aria-hidden="true"
                   />
-                  <p className="ml-9 text-lg font-medium leading-6 text-gray-900">
+                  <p className="ml-9 text-lg font-medium leading-6 text-white">
                     {feature.name}
                   </p>
                 </dt>

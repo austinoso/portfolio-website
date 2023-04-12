@@ -13,12 +13,12 @@ function Header() {
     >
       <div
         className="
-        bg-blue-300
+        bg-black
         bg-opacity-60
         backdrop-blur-sm
       "
       >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex py-44">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex py-44 xl:py-72">
           <div className="space-y-2">
             <h1 className="text-lg">
               <span className="inline-flex items-center rounded-full bg-gray-100 px-3 py-0.5 text-sm font-medium text-gray-800 gap-1">
@@ -28,8 +28,8 @@ function Header() {
               </span>
             </h1>
             <h3 className="text-3xl font-bold">Full-Stack Software Engineer</h3>
-            <p className="pb-4">
-              Full-stack web developer with experience in PHP, Perl, and
+            <p className="pb-4 text-gray-300">
+              Full-stack software developer with experience in PHP, Perl, and
               JavaScript frameworks.
             </p>
             <div className="flex gap-2">
@@ -40,7 +40,7 @@ function Header() {
               >
                 <button
                   type="button"
-                  className="inline-flex items-center px-3.5 py-2 border border-transparent text-sm leading-4 font-medium rounded-full shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                  className="inline-flex items-center px-3.5 py-2 border border-transparent text-sm leading-4 font-medium rounded-full shadow-sm text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                 >
                   LinkedIn
                   <UserIcon className="ml-1 -mr-1 h-5 w-5" aria-hidden="true" />
