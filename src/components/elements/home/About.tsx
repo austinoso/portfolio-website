@@ -30,13 +30,15 @@ export default function About() {
             My Background
           </p>
           <p className="mt-4 text-lg text-gray-300">
-            As a bootcamp graduate and current full-time software developer, I
-            have a passion for learning new skills and improving current ones.
-            Throughout my journey, I have had the opportunity to work with a
-            range of technologies and frameworks, using languages like Ruby,
-            Perl, and JavaScript. I am excited to continue growing and learning
-            as a developer, and to apply my skills to help clients and
-            organizations solve problems and achieve their goals.
+            From my start as a coding bootcamp graduate to my present position
+            as a full-time software developer, I am driven to continually learn
+            new skills and refine the ones I already possess. Throughout my
+            journey, I have acquired experience with a broad spectrum of
+            technologies and frameworks, employing languages like Ruby, Perl,
+            and TypeScript/JavaScript. As a committed developer, I am
+            enthusiastic about ongoing growth and learning, utilizing my
+            abilities to aid clients and organizations in overcoming obstacles
+            and achieving their objectives.
           </p>
         </div>
         <div className="mt-auto flex justify-center lg:justify-end">
