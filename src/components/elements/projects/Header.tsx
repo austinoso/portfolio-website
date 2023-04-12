@@ -60,7 +60,13 @@ export default function Header() {
           <div className="flex items-center justify-between">
             <Link href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Austin Osorio</span>
-              <Image className="h-8 w-auto" src="/images/logo.svg" alt="" />
+              <Image
+                className="h-8 w-auto"
+                src="/images/logo.svg"
+                alt=""
+                width={1}
+                height={1}
+              />
             </Link>
             <button
               type="button"
