@@ -28,9 +28,9 @@ function Header() {
               </span>
             </h1>
             <h3 className="text-3xl font-bold">Full-Stack Software Engineer</h3>
-            <p className="pb-4 text-gray-300">
-              Full-stack software developer with experience in PHP, Perl, and
-              JavaScript frameworks.
+            <p className="pb-4 text-gray-300 max-w-md">
+              Full-stack software developer with over 2 years experience in PHP,
+              Perl, and JavaScript frameworks.
             </p>
             <div className="flex gap-2">
               <a
